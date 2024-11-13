@@ -2,7 +2,7 @@ package org.dador;
 
 /**
  *AZZOUZ Abderrezak 
- *ABDELDAIM Yasser 1
+ *ABDELDAIM Yasser 
  */
 public class MultiTimePad {
 
@@ -47,10 +47,22 @@ public class MultiTimePad {
         System.out.println();
 
         key = new byte[msg1.length() / 2];
+        
         // TODO: renseigner les valeurs de la clé..
         key[0] = 0 ;
         key[1] = 0x50;
-
+        key[2] = (byte) 0xcc;
+        key[3] = (byte) 0xbf ;
+        key[4] = (byte) 0xff ;
+        key[5] = (byte) 0xfc ;
+        key[6] = (byte)  0x8e;
+        key[7] = (byte)  0xfb;
+        key[9] = (byte)  0xab;
+        key[11] = (byte)  0xb5;
+        key[15] = (byte)  0x9f;
+        key[27] = (byte)  0xd3;
+        key[28] = (byte)  0x5c;
+        key[16] = (byte)  0x51;
 
         System.out.println("Key :");
         System.out.println(displayIndex);
@@ -80,7 +92,7 @@ public class MultiTimePad {
             tmpByteMsg = HexConverters.xorArray(key, byteArrayMsg[i]);
             System.out.print(i);
             System.out.print(": ");
-            System.out.println(HexConverters.toPrintableHexFromByteArray(tmpByteMsg));
+            System.out.println(HexConverters.toPrintableString(tmpByteMsg));
             i++;
         }
     }
