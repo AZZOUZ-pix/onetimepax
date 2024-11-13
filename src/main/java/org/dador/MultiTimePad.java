@@ -2,7 +2,7 @@ package org.dador;
 
 /**
  *AZZOUZ Abderrezak 
- *ABDELDAIM Yasser 
+ *ABDELDAIM Yasser 1
  */
 public class MultiTimePad {
 
